@@ -25,7 +25,8 @@ router.post("/api/v2/pdf/link",uploadMedia.single('file'),async(req,res)=>{
             const params = {
                 Bucket: AWSCredentials.bucketName,
                 Key: file.originalname,
-                Body: file.buffer
+                Body: file.buffer,
+                ACL:'public-read'
             };
 
             // Uploading files to the bucket
