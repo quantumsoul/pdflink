@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const uploadMedia = require('../config/multer.config')
-router.post("api/v2/pdf/link",uploadMedia.single('file'),async(req,res)=>{
+router.post("/api/v2/pdf/link",uploadMedia.single('file'),async(req,res)=>{
     try {
         const AWS = require('aws-sdk');
         const fs = require('fs');
