@@ -27,7 +27,7 @@ router.post("/api/v2/pdf/link",uploadMedia.single('file'),async(req,res)=>{
                 Key: file.originalname,
                 Body: file.buffer,
                 ACL:'public-read',
-                ContentType:"application/pdf"
+                ContentType:"application/*"
             };
 
             // Uploading files to the bucket
